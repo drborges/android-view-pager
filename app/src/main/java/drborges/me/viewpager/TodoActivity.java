@@ -2,6 +2,7 @@ package drborges.me.viewpager;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.PagerAdapter;
@@ -11,7 +12,7 @@ import butterknife.ButterKnife;
 import butterknife.InjectView;
 
 
-public class TodoActivity extends InjectableFragmentActiviity {
+public class TodoActivity extends FragmentActivity {
 
     public static final int NUM_PAGES = 2;
 
