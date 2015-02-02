@@ -15,6 +15,8 @@ import butterknife.InjectView;
 public class TodoActivity extends FragmentActivity {
 
     public static final int NUM_PAGES = 2;
+    public static final int TODO_PAGE = 0;
+    public static final int DONE_PAGE = 1;
 
     private PagerAdapter pagerAdapter;
 
@@ -38,7 +40,11 @@ public class TodoActivity extends FragmentActivity {
 
         @Override
         public Fragment getItem(int position) {
-            return new TodoFragment();
+            switch (position) {
+                case TodoActivity.TODO_PAGE: return new TodoFragment();
+                case TodoActivity.DONE_PAGE: return new DoneFragment();
+                default: return new Four0FourFragment();
+            }
         }
 
         @Override
